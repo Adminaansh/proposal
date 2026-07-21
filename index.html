@@ -1,1 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Critical System Update Required</title>
+    <!-- Canvas Confetti Library for the celebration effect -->
+    <script src="https://jsdelivr.net"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: radial-gradient(circle, #2d142c 0%, #150714 100%);
+            overflow: hidden;
+        }
+
+        /* Diagnostic Step 1 Card */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            max-width: 450px;
+            width: 90%;
+            transition: all 0.5s ease;
+        }
+
+        .icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        h2 {
+            color: #ff4b5c;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        p {
+            color: #e0e0e0;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Buttons styling */
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+            min-height: 60px;
+        }
+
+        .btn {
+            padding: 12px 35px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.1s;
+        }
+
+        .btn-primary {
+            background: #ff4b5c;
+            color: white;
+            box-shadow: 0 5px 15px rgba(255, 75, 92, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: #ff2a3f;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #3f3f44;
+            color: #a6a6a4;
+            position: absolute;
+            left: 55%;
+        }
+
+        /* Success Screen Overrides */
+        .success-text {
+            color: #4caf50 !important;
+            font-size: 22px !important;
+            font-weight: bold;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Proposal Box -->
+    <div class="card" id="proposalCard">
+        <div class="icon" id="cardIcon">⚠️</div>
+        <h2 id="cardTitle">System Threat Detected</h2>
+        <p id="cardMessage">Your local memory storage is dangerously full of thoughts about a specific person. Immediate calibration is required.</p>
+        
+        <div class="btn-container" id="btnContainer">
+            <button class="btn btn-primary" id="yesBtn" onclick="nextStep()">Run Fix</button>
+            <button class="btn btn-secondary hidden" id="noBtn">No 😢</button>
+        </div>
+    </div>
+
+    <script>
+        let currentStep = 1;
+        const card = document.getElementById('proposalCard');
+        const icon = document.getElementById('cardIcon');
+        const title = document.getElementById('cardTitle');
+        const message = document.getElementById('cardMessage');
+        const yesBtn = document.getElementById('yesBtn');
+        const noBtn = document.getElementById('noBtn');
+
+        function nextStep() {
+            if (currentStep === 1) {
+                // Advance to the real proposal question
+                currentStep = 2;
+                icon.innerHTML = "💖";
+                title.innerHTML = "Critical Overload!";
+                message.innerHTML = "Heart.exe has completely crashed.<br><br><strong>Will you marry me?</strong>";
+                yesBtn.innerHTML = "YES! 😍";
+                
+                // Position the 'Yes' button statically on the left side
+                yesBtn.style.transform = "translateX(-60px)";
+                
+                // Reveal the elusive 'No' button
+                noBtn.classList.remove('hidden');
+            } else if (currentStep === 2) {
+                // Celebrate the "Yes" click
+                showCelebration();
+            }
+        }
+
+        // Logic to make the No button teleport away from the cursor
+        function moveNoButton() {
+            // Get screen bounds but keep it safely inside the viewport
+            const padding = 100;
+            const maxX = window.innerWidth - padding;
+            const maxY = window.innerHeight - padding;
+            
+            // Generate entirely random standalone positions on the screen
+            const randomX = Math.random() * (maxX - padding) + padding / 2;
+            const randomY = Math.random() * (maxY - padding) + padding / 2;
+
+            // Remove it from the standard card container flex layout
+            noBtn.style.position = 'fixed';
+            noBtn.style.left = randomX + 'px';
+            noBtn.style.top = randomY + 'px';
+        }
+
+        // Trigger teleport on hover (desktop) and touch start (mobile)
+        noBtn.addEventListener('mouseenter', moveNoButton);
+        noBtn.addEventListener('touchstart', (e) => {
+            e.preventDefault(); // Prevents clicking on mobile tap
+            moveNoButton();
+        });
+
+        function showCelebration() {
+            // Remove the interactive 'No' button completely
+            noBtn.remove();
+            yesBtn.style.transform = "none";
+            yesBtn.classList.add('hidden');
+
+            icon.innerHTML = "💍";
+            title.innerHTML = "System Upgraded Successfully!";
+            title.className = "success-text";
+            message.innerHTML = "🎉 CONGRATULATIONS! 🎉<br><br>Life partner module initialized. I love you forever! ❤️";
+
+            // Trigger beautiful continuous background confetti bursts
+            var duration = 5 * 1000;
+            var end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 3,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 }
+                });
+                confetti({
+                    particleCount: 3,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 }
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        }
+    </script>
+</body>
+</html>
 
