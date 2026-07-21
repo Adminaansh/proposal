@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- These meta tags create a beautiful, custom link preview card when you paste the link into WhatsApp -->
-    <title>🚨 System Notice for Divya 🚨</title>
-    <meta name="description" content="Dhanraj's system has encountered a critical anomaly. Click to resolve immediately.">
-    <!-- Confetti Library for the ultimate grand finale -->
+    <title>🌹 For My Beautiful Divya 🌹</title>
+    <meta name="description" content="Dhanraj has a special handwritten message just for you. Open with love!">
+
+    <!-- Ultra-stable, high-density canvas particle confetti engine -->
     <script src="https://jsdelivr.net"></script>
+
     <style>
+        @import url('https://googleapis.com');
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', 'Segoe UI', sans-serif;
         }
 
         body {
@@ -21,115 +24,217 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: radial-gradient(circle, #ff758c 0%, #ff7eb3 100%);
+            /* Premium, rich romantic gradient mesh */
+            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 40%, #fd79a8 70%, #ffeaa7 100%);
+            font-family: 'Quicksand', sans-serif;
             overflow: hidden;
             position: relative;
         }
 
-        /* Floating background decorative emojis */
-        .bg-heart {
+        /* Magical ambient drifting heart stickers */
+        .ambient-sticker {
             position: absolute;
-            font-size: 24px;
-            opacity: 0.2;
-            animation: floatUp 6s linear infinite;
+            font-size: 32px;
+            pointer-events: none;
+            user-select: none;
+            animation: driftUpwards 7s linear infinite;
+            z-index: 1;
+            filter: drop-shadow(0 6px 10px rgba(255, 65, 108, 0.25));
         }
 
-        @keyframes floatUp {
-            0% { transform: translateY(100vh) rotate(0deg); opacity: 0.2; }
-            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        @keyframes driftUpwards {
+            0% {
+                transform: translateY(105vh) scale(0.4) rotate(0deg);
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 0.9;
+            }
+
+            85% {
+                opacity: 0.9;
+            }
+
+            100% {
+                transform: translateY(-15vh) scale(1.4) rotate(360deg);
+                opacity: 0;
+            }
         }
 
-        /* Premium Floating Card Design */
-        .card {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(15px);
-            border: 2px solid rgba(255, 255, 255, 0.5);
-            padding: 45px 35px;
-            border-radius: 30px;
+        /* Luxury Romantic Presentation Deck with Gold Trim */
+        .proposal-deck {
+            background: rgba(255, 255, 255, 0.95);
+            border: 4px solid #fff3f5;
+            border-radius: 40px;
+            padding: 40px 30px;
             text-align: center;
-            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15), inset 0 0 15px rgba(255,255,255,0.6);
-            max-width: 480px;
-            width: 90%;
+            box-shadow: 0 35px 70px rgba(214, 15, 61, 0.35), inset 0 0 30px rgba(255, 182, 193, 0.4);
+            max-width: 470px;
+            width: 92%;
             z-index: 10;
-            transform: translateY(0);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            outline: 2px solid #ffd700;
+            /* Subtle hidden luxury luxury feel */
+            outline-offset: -10px;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 30px 50px rgba(255, 75, 92, 0.25);
+        /* Elegantly Pulsing Heart Badge Overlay */
+        .hero-badge {
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #fff0f3 0%, #ffe3e8 100%);
+            border-radius: 50%;
+            margin: 0 auto 25px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            box-shadow: 0 15px 35px rgba(255, 117, 140, 0.35);
+            animation: luxuryHeartbeat 1.3s infinite ease-in-out;
         }
 
-        .avatar-container {
-            font-size: 65px;
-            margin-bottom: 15px;
-            display: inline-block;
-            animation: bounce 2s infinite;
-        }
+        @keyframes luxuryHeartbeat {
+            0% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 0px rgba(255, 65, 108, 0));
+            }
 
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            20% {
+                transform: scale(1.12);
+                filter: drop-shadow(0 0 12px rgba(255, 65, 108, 0.4));
+            }
+
+            40% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 0px rgba(255, 65, 108, 0));
+            }
+
+            60% {
+                transform: scale(1.18);
+                filter: drop-shadow(0 0 18px rgba(255, 65, 108, 0.5));
+            }
+
+            100% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 0px rgba(255, 65, 108, 0));
+            }
         }
 
         h2 {
+            font-family: 'Dancing Script', cursive;
+            color: #2d142c;
+            font-size: 42px;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .name-divya {
             color: #d11141;
-            margin-bottom: 15px;
-            font-size: 26px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
+            text-shadow: 0 2px 4px rgba(255, 65, 108, 0.15);
+            border-bottom: 3px double #ff4b2b;
+            padding-bottom: 2px;
+        }
+
+        .name-dhanraj {
+            color: #ff4b2b;
+            font-weight: 700;
         }
 
         p {
             color: #4a4a4a;
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 35px;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
             font-weight: 500;
         }
 
-        /* Button Layout & Interaction Styles */
-        .btn-container {
+        /* Romantic Dashboard Modules */
+        .stats-dashboard {
+            background: linear-gradient(180deg, #fff5f6 0%, #ffebee 100%);
+            border: 2px solid #ffccd5;
+            border-radius: 24px;
+            padding: 18px;
+            margin-bottom: 35px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            box-shadow: 0 8px 20px rgba(255, 182, 193, 0.2);
+        }
+
+        .stat-node {
+            text-align: center;
+            background: white;
+            padding: 12px 8px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 182, 193, 0.4);
+            box-shadow: 0 4px 15px rgba(214, 15, 61, 0.03);
+        }
+
+        .stat-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #9e9e9e;
+            letter-spacing: 0.8px;
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+
+        .stat-val {
+            font-size: 18px;
+            font-weight: 700;
+            color: #d11141;
+        }
+
+        /* Precision Interaction Control Grid Placement */
+        .control-grid {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 25px;
             position: relative;
-            min-height: 70px;
+            min-height: 90px;
+            width: 100%;
         }
 
         .btn {
-            padding: 14px 40px;
-            font-size: 18px;
+            padding: 18px 50px;
+            font-size: 22px;
             font-weight: 700;
             border: none;
             border-radius: 50px;
             cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: all 0.25s ease;
+            box-shadow: 0 12px 28px rgba(255, 65, 108, 0.3);
         }
 
         .btn-yes {
             background: linear-gradient(45deg, #ff416c, #ff4b2b);
             color: white;
-            box-shadow: 0 8px 25px rgba(255, 65, 108, 0.4);
+            z-index: 12;
         }
 
         .btn-yes:hover {
-            transform: scale(1.1);
-            box-shadow: 0 12px 30px rgba(255, 65, 108, 0.6);
+            transform: scale(1.1) rotate(-1.5deg);
+            box-shadow: 0 18px 35px rgba(255, 65, 108, 0.5);
         }
 
         .btn-no {
-            background: #eceff1;
-            color: #b0bec5;
+            background: #f5f5f5;
+            color: #9e9e9e;
             position: absolute;
-            transition: left 0.12s ease-out, top 0.12s ease-out; /* Keeps the runaway feeling crisp and snappy */
+            font-size: 16px;
+            padding: 14px 32px;
+            z-index: 15;
+            will-change: left, top;
+            border: 1px solid #e0e0e0;
+            transition: left 0.1s cubic-bezier(0.19, 1, 0.22, 1), top 0.1s cubic-bezier(0.19, 1, 0.22, 1);
         }
 
-        .success-title {
-            color: #2e7d32 !important;
-            font-size: 28px !important;
+        .victory-text {
+            font-family: 'Dancing Script', cursive !important;
+            color: #c2185b !important;
+            font-size: 48px !important;
         }
 
         .hidden {
@@ -137,120 +242,71 @@
         }
     </style>
 </head>
+
 <body>
 
-    <!-- Main Dynamic Application Window -->
-    <div class="card" id="mainCard">
-        <div class="avatar-container" id="displayEmoji">🕵️‍♂️</div>
-        <h2 id="displayTitle">Security Access Scan</h2>
-        <p id="displayMessage">System has detected a beautiful unauthorized user named <strong>Divya</strong> attempting to navigate through <strong>Dhanraj's</strong> thoughts. Run system diagnostics?</p>
-        
-        <div class="btn-container" id="actionArea">
-            <button class="btn btn-yes" id="yesBtn" onclick="processNextState()">Yes, Proceed</button>
-            <button class="btn btn-no hidden" id="noBtn">No 🚫</button>
+    <div class="proposal-deck" id="deckContainer">
+        <!-- Floating Romantic Emblem Layer -->
+        <div class="hero-badge" id="heroAsset">🌹</div>
+
+        <h2 id="deckTitle">My Dearest <span class="name-divya">Divya</span>,</h2>
+        <p id="deckPrompt"><span class="name-dhanraj">Dhanraj</span> has wrapped a beautiful secret note with your name
+            on it. Would you please open it?</p>
+
+        <!-- Live Romantic Statistic Tracker Cards -->
+        <div class="stats-dashboard">
+            <div class="stat-node">
+                <div class="stat-label">My Promise</div>
+                <div class="stat-val" id="valAffection">100% Love</div>
+            </div>
+            <div class="stat-node">
+                <div class="stat-label">Heartbeats For You</div>
+                <div class="stat-val" id="valHeart">72 bpm</div>
+            </div>
+        </div>
+
+        <div class="control-grid" id="actionField">
+            <button class="btn btn-yes" id="yesAction" onclick="transitionAppDeck()">Open Letter 💌</button>
+            <button class="btn btn-no hidden" id="noAction">No 🚫</button>
         </div>
     </div>
 
     <script>
-        let appState = 1;
-        const mainCard = document.getElementById('mainCard');
-        const displayEmoji = document.getElementById('displayEmoji');
-        const displayTitle = document.getElementById('displayTitle');
-        const displayMessage = document.getElementById('displayMessage');
-        const yesBtn = document.getElementById('yesBtn');
-        const noBtn = document.getElementById('noBtn');
+        let runningState = 1;
+        const heroAsset = document.getElementById('heroAsset');
+        const deckTitle = document.getElementById('deckTitle');
+        const deckPrompt = document.getElementById('deckPrompt');
+        const yesAction = document.getElementById('yesAction');
+        const noAction = document.getElementById('noAction');
 
-        // Create random romantic floating elements continuously
+        const valAffection = document.getElementById('valAffection');
+        const valHeart = document.getElementById('valHeart');
+
+        // Heartbeat pulse fluttering simulator loop
         setInterval(() => {
-            const heart = document.createElement('div');
-            heart.classList.add('bg-heart');
-            heart.innerText = ['❤️', '💖', '✨', '💍', '🌸'][Math.floor(Math.random() * 5)];
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
-            heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
-            document.body.appendChild(heart);
-            setTimeout(() => heart.remove(), 7000);
+            if (runningState < 3) {
+                const simulatedPulse = Math.floor(Math.random() * (122 - 96 + 1)) + 96;
+                valHeart.innerText = simulatedPulse + " bpm";
+            }
+        }, 1000);
+
+        // Continuous high-definition heart sticker floating deployment loop
+        const stickerArray = ['❤️', '💖', '💍', '✨', '🌸', '💝', '🌹', '💕', '🎈'];
+        setInterval(() => {
+            const stickerElement = document.createElement('div');
+            stickerElement.classList.add('ambient-sticker');
+            stickerElement.innerText = stickerArray[Math.floor(Math.random() * stickerArray.length)];
+            stickerElement.style.left = Math.random() * 95 + 'vw';
+            stickerElement.style.animationDuration = (Math.random() * 3 + 4) + 's';
+            document.body.appendChild(stickerElement);
+            setTimeout(() => stickerElement.remove(), 6500);
         }, 400);
 
-        function processNextState() {
-            if (appState === 1) {
-                // Advance step to the ultimate query
-                appState = 2;
-                displayEmoji.innerHTML = "💝";
-                displayTitle.innerHTML = "Fatal Heart Crash!";
-                displayMessage.innerHTML = "<strong>Dhanraj's</strong> love subroutines have completely taken over the system.<br><br>Hey <strong>Divya</strong>, will you make me the happiest programmer alive and marry me?";
-                yesBtn.innerHTML = "YES! 💍✨";
-                
-                // Shift 'Yes' leftward to leave space for the trick button setup
-                yesBtn.style.transform = "translateX(-65px)";
-                noBtn.classList.remove('hidden');
-                
-                // Default the initial position of the 'No' button safely inside the container boundaries
-                noBtn.style.left = (yesBtn.offsetLeft + yesBtn.offsetWidth + 25) + 'px';
-                noBtn.style.top = yesBtn.offsetTop + 'px';
-                
-            } else if (appState === 2) {
-                // Success execution path
-                executeGrandFinale();
-            }
-        }
+        function transitionAppDeck() {
+            if (runningState === 1) {
+                runningState = 2;
 
-        // Upgraded High-Velocity Evasive Logic for the 'No' button
-        function triggerButtonEscape() {
-            // Define strict safety pads away from screen view borders
-            const borderPadding = 120;
-            const widthLimit = window.innerWidth - borderPadding;
-            const heightLimit = window.innerHeight - borderPadding;
-            
-            // Generate lightning-fast standalone alternative layout coordinates
-            const alternateX = Math.random() * (widthLimit - borderPadding) + (borderPadding / 2);
-            const alternateY = Math.random() * (heightLimit - borderPadding) + (borderPadding / 2);
-
-            noBtn.style.position = 'fixed';
-            noBtn.style.left = alternateX + 'px';
-            noBtn.style.top = alternateY + 'px';
-        }
-
-        // Link event triggers for multi-device interception (Desktop + Smartphone)
-        noBtn.addEventListener('mouseenter', triggerButtonEscape);
-        noBtn.addEventListener('mouseover', triggerButtonEscape);
-        noBtn.addEventListener('touchstart', (event) => {
-            event.preventDefault(); // Deadlocks mobile multi-tap overlays completely
-            triggerButtonEscape();
-        });
-
-        function executeGrandFinale() {
-            noBtn.remove();
-            yesBtn.style.transform = "none";
-            yesBtn.classList.add('hidden');
-
-            displayEmoji.innerHTML = "👩‍❤️‍👨";
-            displayEmoji.style.animation = "bounce 0.5s infinite alternate";
-            displayTitle.innerHTML = "Divya & Dhanraj: Locked Forever!";
-            displayTitle.classList.add('success-title');
-            displayMessage.innerHTML = "🎉 ACCESS GRANTED! 🎉<br><br>The life partner module has successfully initialized.<br><strong>I love you infinite amounts, Divya! ❤️</strong>";
-
-            // Premium continuous celebration confetti fountain
-            const duration = 7 * 1000;
-            const animationEnd = Date.now() + duration;
-            const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
-
-            function randomInRange(min, max) {
-                return Math.random() * (max - min) + min;
-            }
-
-            const interval = setInterval(function() {
-                const timeLeft = animationEnd - Date.now();
-
-                if (timeLeft <= 0) {
-                    return clearInterval(interval);
-                }
-
-                const particleCount = 50 * (timeLeft / duration);
-                confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
-                confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
-            }, 250);
-        }
-    </script>
-</body>
-</html>
+                // Max Romance Layman Dialogue Overhaul
+                heroAsset.innerText = "💍";
+                deckTitle.innerHTML = "Will You Marry Me?";
+                deckPrompt.innerHTML = "Dearest Divya, you make my whole world infinitely brighter and more beautiful just by existing. Dhanraj wants to hold your hand through every sunset, share every smile, and love you unconditionally forever and ever. Will you make me the happiest person in the universe?";// Shift metrics to pure absolute devotionvalAffection.innerText = "To Eternity ✨";valHeart.innerText = "145 bpm";yesAction.innerHTML = "YES! 😍❤️";// Reposition main confirmation target to assign spacing boundary constraintsyesAction.style.transform = "translateX(-65px)";noAction.classList.remove('hidden');noAction.style.left = (yesAction.offsetLeft + yesAction.offsetWidth + 10) + 'px';noAction.style.top = yesAction.offsetTop + 'px';} else if (runningState === 2) {executeVictoryGrandFinale();}}// Kinetic runway controller for button interception tracking loopsfunction escapeFromTarget(event) {const paddingBoundary = 120;const horizontalLimit = window.innerWidth - paddingBoundary;const verticalLimit = window.innerHeight - paddingBoundary;const escapeCoordinateX = Math.random() * (horizontalLimit - paddingBoundary) + (paddingBoundary / 2);const escapeCoordinateY = Math.random() * (verticalLimit - paddingBoundary) + (paddingBoundary / 2);noAction.style.position = 'fixed';noAction.style.left = escapeCoordinateX + 'px';noAction.style.top = escapeCoordinateY + 'px';}noAction.addEventListener('mouseenter', escapeFromTarget);noAction.addEventListener('mouseover', escapeFromTarget);noAction.addEventListener('touchstart', (e) => {e.preventDefault(); // Complete safety layout wall defending mobile multi-tapsescapeFromTarget();});function executeVictoryGrandFinale() {runningState = 3;noAction.remove();yesAction.classList.add('hidden');heroAsset.innerText = "👩‍❤️‍👨";valHeart.innerText = "Pure Bliss 🥰";valAffection.innerText = "Forever! ♾️";deckTitle.innerHTML = "She Said YES! 💖";deckTitle.classList.add('victory-text');deckPrompt.innerHTML = "Thank you for choosing me, my beautiful Divya!The greatest, most magical love story of our lives begins today.I love you more than all the stars in the sky! 🌟💍";// Premium high-velocity long duration victory confetti stormconst duration = 12 * 1000;const animationEnd = Date.now() + duration;(function frame() {confetti({ particleCount: 4, angle: 55, spread: 70, origin: { x: 0, y: 0.7 } });confetti({ particleCount: 4, angle: 125, spread: 70, origin: { x: 1, y: 0.7 } });if (Date.now() < animationEnd) {requestAnimationFrame(frame);}}());}
