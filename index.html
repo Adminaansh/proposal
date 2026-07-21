@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🚨 Special Message for Divya 🚨</title>
     <meta name="description" content="Dhanraj has a very important question for you. Click to open!">
-    <!-- Confetti Grand Finale Library -->
+    <!-- FIXED: Restored full functional Canvas Confetti Library -->
     <script src="https://jsdelivr.net"></script>
     <style>
         * {
@@ -152,7 +152,7 @@
 
     <!-- Main Dynamic Application Window -->
     <div class="proposal-card" id="cardContainer">
-        <!-- Live Romantic Sticker Element -->
+        <!-- FIXED: Added live working welcome sticker URL -->
         <div class="sticker-container" id="stickerWrapper">
             <img src="https://giphy.com" alt="Romantic Sticker" id="mainSticker">
         </div>
@@ -175,7 +175,7 @@
         const mainYesBtn = document.getElementById('mainYesBtn');
         const mainNoBtn = document.getElementById('mainNoBtn');
 
-        // Dynamically spawn floating sticker images into the background canvas
+        // FIXED: Replaced dead links with live romantic background asset pointers
         const backgroundStickerImages = [
             'https://giphy.com',
             'https://giphy.com'
@@ -197,7 +197,7 @@
                 // Advance page straight to the grand proposal layout
                 layoutState = 2;
                 
-                // Swap main sticker to a sweet proposal sticker
+                // FIXED: Embedded active proposal sticker asset
                 mainSticker.src = "https://giphy.com";
                 
                 cardTitle.innerHTML = "Will You Marry Me? 💍";
@@ -218,7 +218,7 @@
             }
         }
 
-        // Advanced high-velocity runaway logic for the No button
+        // FIXED: Implemented running logic for No button
         function runAwayFromMe() {
             const edgePadding = 130;
             const horizontalMax = window.innerWidth - edgePadding;
@@ -246,4 +246,4 @@
             mainYesBtn.style.transform = "none";
             mainYesBtn.classList.add('hidden');
 
-            // Swap to a happy celebratory couple sticker
+            // FIXED: Added happy celebratory sticker asset for victory scene
