@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Critical System Update Required</title>
-    <!-- Canvas Confetti Library for the celebration effect -->
+    <!-- These meta tags create a beautiful, custom link preview card when you paste the link into WhatsApp -->
+    <title>🚨 System Notice for Divya 🚨</title>
+    <meta name="description" content="Dhanraj's system has encountered a critical anomaly. Click to resolve immediately.">
+    <!-- Confetti Library for the ultimate grand finale -->
     <script src="https://jsdelivr.net"></script>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
         }
 
         body {
@@ -19,201 +21,236 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: radial-gradient(circle, #2d142c 0%, #150714 100%);
+            background: radial-gradient(circle, #ff758c 0%, #ff7eb3 100%);
             overflow: hidden;
+            position: relative;
         }
 
-        /* Diagnostic Step 1 Card */
+        /* Floating background decorative emojis */
+        .bg-heart {
+            position: absolute;
+            font-size: 24px;
+            opacity: 0.2;
+            animation: floatUp 6s linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0.2; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Premium Floating Card Design */
         .card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 40px;
-            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            padding: 45px 35px;
+            border-radius: 30px;
             text-align: center;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-            max-width: 450px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15), inset 0 0 15px rgba(255,255,255,0.6);
+            max-width: 480px;
             width: 90%;
-            transition: all 0.5s ease;
+            z-index: 10;
+            transform: translateY(0);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        .icon {
-            font-size: 50px;
-            margin-bottom: 20px;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 50px rgba(255, 75, 92, 0.25);
+        }
+
+        .avatar-container {
+            font-size: 65px;
+            margin-bottom: 15px;
             display: inline-block;
-            animation: pulse 1.5s infinite;
+            animation: bounce 2s infinite;
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
 
         h2 {
-            color: #ff4b5c;
+            color: #d11141;
             margin-bottom: 15px;
-            font-size: 24px;
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
         }
 
         p {
-            color: #e0e0e0;
+            color: #4a4a4a;
             font-size: 16px;
             line-height: 1.6;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
+            font-weight: 500;
         }
 
-        /* Buttons styling */
+        /* Button Layout & Interaction Styles */
         .btn-container {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            align-items: center;
+            gap: 25px;
             position: relative;
-            min-height: 60px;
+            min-height: 70px;
         }
 
         .btn {
-            padding: 12px 35px;
-            font-size: 16px;
-            font-weight: bold;
+            padding: 14px 40px;
+            font-size: 18px;
+            font-weight: 700;
             border: none;
             border-radius: 50px;
             cursor: pointer;
-            transition: background 0.3s, transform 0.1s;
+            transition: all 0.2s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
 
-        .btn-primary {
-            background: #ff4b5c;
+        .btn-yes {
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
             color: white;
-            box-shadow: 0 5px 15px rgba(255, 75, 92, 0.4);
+            box-shadow: 0 8px 25px rgba(255, 65, 108, 0.4);
         }
 
-        .btn-primary:hover {
-            background: #ff2a3f;
-            transform: translateY(-2px);
+        .btn-yes:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 30px rgba(255, 65, 108, 0.6);
         }
 
-        .btn-secondary {
-            background: #3f3f44;
-            color: #a6a6a4;
+        .btn-no {
+            background: #eceff1;
+            color: #b0bec5;
             position: absolute;
-            left: 55%;
+            transition: left 0.12s ease-out, top 0.12s ease-out; /* Keeps the runaway feeling crisp and snappy */
         }
 
-        /* Success Screen Overrides */
-        .success-text {
-            color: #4caf50 !important;
-            font-size: 22px !important;
-            font-weight: bold;
+        .success-title {
+            color: #2e7d32 !important;
+            font-size: 28px !important;
         }
 
         .hidden {
-            display: none;
+            display: none !important;
         }
     </style>
 </head>
 <body>
 
-    <!-- Main Proposal Box -->
-    <div class="card" id="proposalCard">
-        <div class="icon" id="cardIcon">⚠️</div>
-        <h2 id="cardTitle">System Threat Detected</h2>
-        <p id="cardMessage">Your local memory storage is dangerously full of thoughts about a specific person. Immediate calibration is required.</p>
+    <!-- Main Dynamic Application Window -->
+    <div class="card" id="mainCard">
+        <div class="avatar-container" id="displayEmoji">🕵️‍♂️</div>
+        <h2 id="displayTitle">Security Access Scan</h2>
+        <p id="displayMessage">System has detected a beautiful unauthorized user named <strong>Divya</strong> attempting to navigate through <strong>Dhanraj's</strong> thoughts. Run system diagnostics?</p>
         
-        <div class="btn-container" id="btnContainer">
-            <button class="btn btn-primary" id="yesBtn" onclick="nextStep()">Run Fix</button>
-            <button class="btn btn-secondary hidden" id="noBtn">No 😢</button>
+        <div class="btn-container" id="actionArea">
+            <button class="btn btn-yes" id="yesBtn" onclick="processNextState()">Yes, Proceed</button>
+            <button class="btn btn-no hidden" id="noBtn">No 🚫</button>
         </div>
     </div>
 
     <script>
-        let currentStep = 1;
-        const card = document.getElementById('proposalCard');
-        const icon = document.getElementById('cardIcon');
-        const title = document.getElementById('cardTitle');
-        const message = document.getElementById('cardMessage');
+        let appState = 1;
+        const mainCard = document.getElementById('mainCard');
+        const displayEmoji = document.getElementById('displayEmoji');
+        const displayTitle = document.getElementById('displayTitle');
+        const displayMessage = document.getElementById('displayMessage');
         const yesBtn = document.getElementById('yesBtn');
         const noBtn = document.getElementById('noBtn');
 
-        function nextStep() {
-            if (currentStep === 1) {
-                // Advance to the real proposal question
-                currentStep = 2;
-                icon.innerHTML = "💖";
-                title.innerHTML = "Critical Overload!";
-                message.innerHTML = "Heart.exe has completely crashed.<br><br><strong>Will you marry me?</strong>";
-                yesBtn.innerHTML = "YES! 😍";
+        // Create random romantic floating elements continuously
+        setInterval(() => {
+            const heart = document.createElement('div');
+            heart.classList.add('bg-heart');
+            heart.innerText = ['❤️', '💖', '✨', '💍', '🌸'][Math.floor(Math.random() * 5)];
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+            heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 7000);
+        }, 400);
+
+        function processNextState() {
+            if (appState === 1) {
+                // Advance step to the ultimate query
+                appState = 2;
+                displayEmoji.innerHTML = "💝";
+                displayTitle.innerHTML = "Fatal Heart Crash!";
+                displayMessage.innerHTML = "<strong>Dhanraj's</strong> love subroutines have completely taken over the system.<br><br>Hey <strong>Divya</strong>, will you make me the happiest programmer alive and marry me?";
+                yesBtn.innerHTML = "YES! 💍✨";
                 
-                // Position the 'Yes' button statically on the left side
-                yesBtn.style.transform = "translateX(-60px)";
-                
-                // Reveal the elusive 'No' button
+                // Shift 'Yes' leftward to leave space for the trick button setup
+                yesBtn.style.transform = "translateX(-65px)";
                 noBtn.classList.remove('hidden');
-            } else if (currentStep === 2) {
-                // Celebrate the "Yes" click
-                showCelebration();
+                
+                // Default the initial position of the 'No' button safely inside the container boundaries
+                noBtn.style.left = (yesBtn.offsetLeft + yesBtn.offsetWidth + 25) + 'px';
+                noBtn.style.top = yesBtn.offsetTop + 'px';
+                
+            } else if (appState === 2) {
+                // Success execution path
+                executeGrandFinale();
             }
         }
 
-        // Logic to make the No button teleport away from the cursor
-        function moveNoButton() {
-            // Get screen bounds but keep it safely inside the viewport
-            const padding = 100;
-            const maxX = window.innerWidth - padding;
-            const maxY = window.innerHeight - padding;
+        // Upgraded High-Velocity Evasive Logic for the 'No' button
+        function triggerButtonEscape() {
+            // Define strict safety pads away from screen view borders
+            const borderPadding = 120;
+            const widthLimit = window.innerWidth - borderPadding;
+            const heightLimit = window.innerHeight - borderPadding;
             
-            // Generate entirely random standalone positions on the screen
-            const randomX = Math.random() * (maxX - padding) + padding / 2;
-            const randomY = Math.random() * (maxY - padding) + padding / 2;
+            // Generate lightning-fast standalone alternative layout coordinates
+            const alternateX = Math.random() * (widthLimit - borderPadding) + (borderPadding / 2);
+            const alternateY = Math.random() * (heightLimit - borderPadding) + (borderPadding / 2);
 
-            // Remove it from the standard card container flex layout
             noBtn.style.position = 'fixed';
-            noBtn.style.left = randomX + 'px';
-            noBtn.style.top = randomY + 'px';
+            noBtn.style.left = alternateX + 'px';
+            noBtn.style.top = alternateY + 'px';
         }
 
-        // Trigger teleport on hover (desktop) and touch start (mobile)
-        noBtn.addEventListener('mouseenter', moveNoButton);
-        noBtn.addEventListener('touchstart', (e) => {
-            e.preventDefault(); // Prevents clicking on mobile tap
-            moveNoButton();
+        // Link event triggers for multi-device interception (Desktop + Smartphone)
+        noBtn.addEventListener('mouseenter', triggerButtonEscape);
+        noBtn.addEventListener('mouseover', triggerButtonEscape);
+        noBtn.addEventListener('touchstart', (event) => {
+            event.preventDefault(); // Deadlocks mobile multi-tap overlays completely
+            triggerButtonEscape();
         });
 
-        function showCelebration() {
-            // Remove the interactive 'No' button completely
+        function executeGrandFinale() {
             noBtn.remove();
             yesBtn.style.transform = "none";
             yesBtn.classList.add('hidden');
 
-            icon.innerHTML = "💍";
-            title.innerHTML = "System Upgraded Successfully!";
-            title.className = "success-text";
-            message.innerHTML = "🎉 CONGRATULATIONS! 🎉<br><br>Life partner module initialized. I love you forever! ❤️";
+            displayEmoji.innerHTML = "👩‍❤️‍👨";
+            displayEmoji.style.animation = "bounce 0.5s infinite alternate";
+            displayTitle.innerHTML = "Divya & Dhanraj: Locked Forever!";
+            displayTitle.classList.add('success-title');
+            displayMessage.innerHTML = "🎉 ACCESS GRANTED! 🎉<br><br>The life partner module has successfully initialized.<br><strong>I love you infinite amounts, Divya! ❤️</strong>";
 
-            // Trigger beautiful continuous background confetti bursts
-            var duration = 5 * 1000;
-            var end = Date.now() + duration;
+            // Premium continuous celebration confetti fountain
+            const duration = 7 * 1000;
+            const animationEnd = Date.now() + duration;
+            const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
 
-            (function frame() {
-                confetti({
-                    particleCount: 3,
-                    angle: 60,
-                    spread: 55,
-                    origin: { x: 0 }
-                });
-                confetti({
-                    particleCount: 3,
-                    angle: 120,
-                    spread: 55,
-                    origin: { x: 1 }
-                });
+            function randomInRange(min, max) {
+                return Math.random() * (max - min) + min;
+            }
 
-                if (Date.now() < end) {
-                    requestAnimationFrame(frame);
+            const interval = setInterval(function() {
+                const timeLeft = animationEnd - Date.now();
+
+                if (timeLeft <= 0) {
+                    return clearInterval(interval);
                 }
-            }());
+
+                const particleCount = 50 * (timeLeft / duration);
+                confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
+                confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
+            }, 250);
         }
     </script>
 </body>
 </html>
-
