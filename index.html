@@ -5,207 +5,198 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🚨 Critical Notification for Divya 🚨</title>
     <meta name="description" content="Dhanraj has initiated an essential system check. Respond immediately.">
-    
-    <!-- Ultra-reliable, lightweight canvas particle explosion module -->
-    <script src="https://jsdelivr.net"></script>
-    
+    <!-- Canvas Confetti Library for Victory Celebration -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
-        @import url('https://googleapis.com');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 50%, #ff9a9e 100%);
-            font-family: 'Quicksand', sans-serif;
-            overflow: hidden;
-            position: relative;
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500;700&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 50%, #ff9a9e 100%); 
+            font-family: 'Quicksand', sans-serif; 
+            overflow: hidden; 
+            position: relative; 
         }
 
         /* Ambient floating heart stickers canvas layer */
-        .ambient-sticker {
-            position: absolute;
-            font-size: 28px;
-            pointer-events: none;
-            user-select: none;
-            animation: driftUpwards 6s linear infinite;
-            z-index: 1;
-            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+        .ambient-sticker { 
+            position: absolute; 
+            font-size: 28px; 
+            pointer-events: none; 
+            user-select: none; 
+            animation: driftUpwards 6s linear infinite; 
+            z-index: 1; 
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1)); 
         }
 
-        @keyframes driftUpwards {
-            0% { transform: translateY(105vh) scale(0.5) rotate(0deg); opacity: 0; }
-            10% { opacity: 0.8; }
-            90% { opacity: 0.8; }
-            100% { transform: translateY(-15vh) scale(1.2) rotate(360deg); opacity: 0; }
+        @keyframes driftUpwards { 
+            0% { transform: translateY(105vh) scale(0.5) rotate(0deg); opacity: 0; } 
+            10% { opacity: 0.8; } 
+            90% { opacity: 0.8; } 
+            100% { transform: translateY(-15vh) scale(1.2) rotate(360deg); opacity: 0; } 
         }
 
         /* Premium Soft Glassmorphism Love Deck */
-        .proposal-deck {
-            background: rgba(255, 255, 255, 0.92);
-            border: 4px solid #ffffff;
-            border-radius: 40px;
-            padding: 35px 25px;
-            text-align: center;
-            box-shadow: 0 30px 60px rgba(255, 75, 92, 0.3), inset 0 0 20px rgba(255,255,255,0.5);
-            max-width: 460px;
-            width: 92%;
-            z-index: 10;
-            position: relative;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        .proposal-deck { 
+            background: rgba(255, 255, 255, 0.92); 
+            border: 4px solid #ffffff; 
+            border-radius: 40px; 
+            padding: 35px 25px; 
+            text-align: center; 
+            box-shadow: 0 30px 60px rgba(255, 75, 92, 0.3), inset 0 0 20px rgba(255,255,255,0.5); 
+            max-width: 460px; 
+            width: 92%; 
+            z-index: 10; 
+            position: relative; 
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
         }
 
         /* Large Central Interactive Custom Vector Badge */
-        .hero-badge {
-            width: 110px;
-            height: 110px;
-            background: #fff0f2;
-            border-radius: 50%;
-            margin: 0 auto 20px auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 55px;
-            box-shadow: 0 10px 25px rgba(255,117,140,0.2);
-            animation: pulseHeartbeat 1.4s infinite;
+        .hero-badge { 
+            width: 110px; 
+            height: 110px; 
+            background: #fff0f2; 
+            border-radius: 50%; 
+            margin: 0 auto 20px auto; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 55px; 
+            box-shadow: 0 10px 25px rgba(255,117,140,0.2); 
+            animation: pulseHeartbeat 1.4s infinite; 
         }
 
-        @keyframes pulseHeartbeat {
-            0% { transform: scale(1); }
-            15% { transform: scale(1.1); }
-            30% { transform: scale(1); }
-            45% { transform: scale(1.15); }
-            100% { transform: scale(1); }
+        @keyframes pulseHeartbeat { 
+            0% { transform: scale(1); } 
+            15% { transform: scale(1.1); } 
+            30% { transform: scale(1); } 
+            45% { transform: scale(1.15); } 
+            100% { transform: scale(1); } 
         }
 
-        h2 {
-            font-family: 'Fredoka One', cursive;
-            color: #2d142c;
-            font-size: 28px;
-            margin-bottom: 15px;
-            line-height: 1.2;
+        h2 { 
+            font-family: 'Fredoka One', cursive; 
+            color: #2d142c; 
+            font-size: 28px; 
+            margin-bottom: 15px; 
+            line-height: 1.2; 
         }
 
-        .name-divya {
-            color: #ff416c;
-            background: #ffe5ea;
-            padding: 0px 14px;
-            border-radius: 15px;
-            display: inline-block;
+        .name-divya { 
+            color: #ff416c; 
+            background: #ffe5ea; 
+            padding: 0px 14px; 
+            border-radius: 15px; 
+            display: inline-block; 
         }
 
-        .name-dhanraj {
-            color: #ff4b2b;
-            font-weight: 700;
+        .name-dhanraj { 
+            color: #ff4b2b; 
+            font-weight: 700; 
         }
 
-        p {
-            color: #555555;
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 25px;
-            font-weight: 700;
+        p { 
+            color: #555555; 
+            font-size: 16px; 
+            line-height: 1.6; 
+            margin-bottom: 25px; 
+            font-weight: 700; 
         }
 
         /* Playful Statistics Board Panels */
-        .stats-dashboard {
-            background: #fff5f6;
-            border: 2px dashed #ffb3c1;
-            border-radius: 20px;
-            padding: 15px;
-            margin-bottom: 30px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
+        .stats-dashboard { 
+            background: #fff5f6; 
+            border: 2px dashed #ffb3c1; 
+            border-radius: 20px; 
+            padding: 15px; 
+            margin-bottom: 30px; 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 10px; 
         }
 
-        .stat-node {
-            text-align: center;
-            background: white;
-            padding: 8px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        .stat-node { 
+            text-align: center; 
+            background: white; 
+            padding: 8px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02); 
         }
 
-        .stat-label {
-            font-size: 11px;
-            text-transform: uppercase;
-            color: #888888;
-            letter-spacing: 0.5px;
-            margin-bottom: 2px;
+        .stat-label { 
+            font-size: 11px; 
+            text-transform: uppercase; 
+            color: #888888; 
+            letter-spacing: 0.5px; 
+            margin-bottom: 2px; 
         }
 
-        .stat-val {
-            font-family: 'Fredoka One', cursive;
-            font-size: 16px;
-            color: #d11141;
+        .stat-val { 
+            font-family: 'Fredoka One', cursive; 
+            font-size: 16px; 
+            color: #d11141; 
         }
 
         /* Absolute Precision Interactive Control Grid */
-        .control-grid {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            min-height: 80px;
-            width: 100%;
+        .control-grid { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            position: relative; 
+            min-height: 80px; 
+            width: 100%; 
         }
 
-        .btn {
-            font-family: 'Fredoka One', cursive;
-            padding: 16px 45px;
-            font-size: 20px;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        .btn { 
+            font-family: 'Fredoka One', cursive; 
+            padding: 16px 45px; 
+            font-size: 20px; 
+            border: none; 
+            border-radius: 50px; 
+            cursor: pointer; 
+            transition: transform 0.2s, box-shadow 0.2s; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
         }
 
-        .btn-yes {
-            background: linear-gradient(45deg, #ff416c, #ff4b2b);
-            color: white;
-            z-index: 12;
+        .btn-yes { 
+            background: linear-gradient(45deg, #ff416c, #ff4b2b); 
+            color: white; 
+            z-index: 12; 
         }
 
-        .btn-yes:hover {
-            transform: scale(1.1) rotate(-1deg);
-            box-shadow: 0 15px 30px rgba(255, 65, 108, 0.4);
+        .btn-yes:hover { 
+            transform: scale(1.1) rotate(-1deg); 
+            box-shadow: 0 15px 30px rgba(255, 65, 108, 0.4); 
         }
 
-        .btn-no {
-            background: #e0e0e0;
-            color: #7c7c7c;
-            position: absolute;
-            font-size: 16px;
-            padding: 12px 30px;
-            z-index: 15;
-            will-change: left, top;
-            transition: left 0.1s cubic-bezier(0.19, 1, 0.22, 1), top 0.1s cubic-bezier(0.19, 1, 0.22, 1);
+        .btn-no { 
+            background: #e0e0e0; 
+            color: #7c7c7c; 
+            position: absolute; 
+            font-size: 16px; 
+            padding: 12px 30px; 
+            z-index: 15; 
+            will-change: left, top; 
+            transition: left 0.1s cubic-bezier(0.19, 1, 0.22, 1), top 0.1s cubic-bezier(0.19, 1, 0.22, 1); 
         }
 
-        .victory-text {
-            color: #2e7d32 !important;
+        .victory-text { 
+            color: #2e7d32 !important; 
         }
 
-        .hidden {
-            display: none !important;
+        .hidden { 
+            display: none !important; 
         }
     </style>
 </head>
 <body>
-
     <div class="proposal-deck" id="deckContainer">
         <!-- Main dynamic semantic layout graphics vector channel -->
         <div class="hero-badge" id="heroAsset">💌</div>
-        
         <h2 id="deckTitle">Hello <span class="name-divya">Divya</span>!</h2>
         <p id="deckPrompt">A dedicated data pipeline connection from <span class="name-dhanraj">Dhanraj</span> has requested your attention. Please decrypt the file!</p>
         
@@ -234,7 +225,6 @@
         const deckPrompt = document.getElementById('deckPrompt');
         const yesAction = document.getElementById('yesAction');
         const noAction = document.getElementById('noAction');
-        
         const valAffection = document.getElementById('valAffection');
         const valHeart = document.getElementById('valHeart');
 
@@ -261,7 +251,6 @@
         function transitionAppDeck() {
             if (runningState === 1) {
                 runningState = 2;
-                
                 // Transition interface visual layout channels safely
                 heroAsset.innerText = "💍";
                 deckTitle.innerHTML = "Will You Marry Me?";
@@ -270,7 +259,6 @@
                 // Upgrade operational analytics board telemetry metrics
                 valAffection.innerText = "∞ INF%";
                 valHeart.innerText = "140 bpm";
-                
                 yesAction.innerHTML = "YES! 😍";
                 
                 // Shift Yes button layout alignment configuration leftward safely
@@ -279,6 +267,58 @@
                 
                 // Lock initial placement coordinates inside safe grid margins
                 noAction.style.left = (yesAction.offsetLeft + yesAction.offsetWidth + 10) + 'px';
+                noAction.style.top = yesAction.offsetTop + 'px';
+            } else if (runningState === 2) {
+                executeVictoryGrandFinale();
+            }
+        }
 
+        // Kinetic proximity target interception runaway calculator vector engine
+        function escapeFromTarget(event) {
+            const paddingBoundary = 100;
+            const horizontalLimit = window.innerWidth - paddingBoundary;
+            const verticalLimit = window.innerHeight - paddingBoundary;
 
-                noAction.style.top = yesAction.offsetTop + 'px';} else if (runningState === 2) {executeVictoryGrandFinale();}}// Kinetic proximity target interception runaway calculator vector enginefunction escapeFromTarget(event) {const paddingBoundary = 100;const horizontalLimit = window.innerWidth - paddingBoundary;const verticalLimit = window.innerHeight - paddingBoundary;// Generate raw mathematically independent position grids across device viewportsconst escapeCoordinateX = Math.random() * (horizontalLimit - paddingBoundary) + (paddingBoundary / 2);const escapeCoordinateY = Math.random() * (verticalLimit - paddingBoundary) + (paddingBoundary / 2);noAction.style.position = 'fixed';noAction.style.left = escapeCoordinateX + 'px';noAction.style.top = escapeCoordinateY + 'px';}// Attach strict device interceptor loops to manage touch points and micenoAction.addEventListener('mouseenter', escapeFromTarget);noAction.addEventListener('mouseover', escapeFromTarget);noAction.addEventListener('touchstart', (e) => {e.preventDefault(); // Deadlocks smartphone single-tap event overlays completelyescapeFromTarget();});function executeVictoryGrandFinale() {runningState = 3;noAction.remove();yesAction.classList.add('hidden');heroAsset.innerText = "👩‍❤️‍👨";valHeart.innerText = "Stable ❤️";valAffection.innerText = "1000% ✅";deckTitle.innerHTML = "Divya & Dhanraj: Merged!";deckTitle.classList.add('victory-text');deckPrompt.innerHTML = "🎉 SUCCESS MATRIX COMPILED! 🎉The life partner database has been successfully updated.I love you infinite amounts, Divya!";// Launch infinite side-angle multi-colored celebratory confetti arraysconst duration = 10 * 1000;const animationEnd = Date.now() + duration;(function frame() {confetti({ particleCount: 3, angle: 60, spread: 65, origin: { x: 0, y: 0.75 } });confetti({ particleCount: 3, angle: 120, spread: 65, origin: { x: 1, y: 0.75 } });if (Date.now() < animationEnd) {requestAnimationFrame(frame);}}());}
+            // Generate raw mathematically independent position grids across device viewports
+            const escapeCoordinateX = Math.random() * (horizontalLimit - paddingBoundary) + (paddingBoundary / 2);
+            const escapeCoordinateY = Math.random() * (verticalLimit - paddingBoundary) + (paddingBoundary / 2);
+
+            noAction.style.position = 'fixed';
+            noAction.style.left = escapeCoordinateX + 'px';
+            noAction.style.top = escapeCoordinateY + 'px';
+        }
+
+        // Attach strict device interceptor loops to manage touch points and mouseovers
+        noAction.addEventListener('mouseenter', escapeFromTarget);
+        noAction.addEventListener('mouseover', escapeFromTarget);
+        noAction.addEventListener('touchstart', (e) => {
+            e.preventDefault(); // Deadlocks smartphone single-tap event overlays completely
+            escapeFromTarget();
+        });
+
+        function executeVictoryGrandFinale() {
+            runningState = 3;
+            noAction.remove();
+            yesAction.classList.add('hidden');
+            heroAsset.innerText = "👩‍❤️‍👨";
+            valHeart.innerText = "Stable ❤️";
+            valAffection.innerText = "1000% ✅";
+            deckTitle.innerHTML = "Divya & Dhanraj: Merged!";
+            deckTitle.classList.add('victory-text');
+            deckPrompt.innerHTML = "🎉 SUCCESS MATRIX COMPILED! 🎉<br>The life partner database has been successfully updated.<br>I love you infinite amounts, Divya!";
+
+            // Launch infinite side-angle multi-colored celebratory confetti arrays
+            const duration = 10 * 1000;
+            const animationEnd = Date.now() + duration;
+
+            (function frame() {
+                confetti({ particleCount: 3, angle: 60, spread: 65, origin: { x: 0, y: 0.75 } });
+                confetti({ particleCount: 3, angle: 120, spread: 65, origin: { x: 1, y: 0.75 } });
+                if (Date.now() < animationEnd) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        }
+    </script>
+</body>
+</html>
