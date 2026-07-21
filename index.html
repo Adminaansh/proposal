@@ -7,11 +7,8 @@
     <title>🌹 For My Beautiful Divya 🌹</title>
     <meta name="description" content="Dhanraj has a special handwritten message just for you. Open with love!">
 
-    <!-- Ultra-stable, high-density canvas particle confetti engine -->
-    <script src="https://jsdelivr.net"></script>
-
     <style>
-        @import url('https://googleapis.com');
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Dancing+Script:wght@700&display=swap');
 
         * {
             margin: 0;
@@ -278,24 +275,23 @@
         const deckPrompt = document.getElementById('deckPrompt');
         const yesAction = document.getElementById('yesAction');
         const noAction = document.getElementById('noAction');
-
         const valAffection = document.getElementById('valAffection');
         const valHeart = document.getElementById('valHeart');
 
-        // Heartbeat pulse fluttering simulator loop
-        setInterval(() => {
+        function updateHeartbeat() {
             if (runningState < 3) {
                 const simulatedPulse = Math.floor(Math.random() * (122 - 96 + 1)) + 96;
-                valHeart.innerText = simulatedPulse + " bpm";
+                valHeart.textContent = simulatedPulse + ' bpm';
             }
-        }, 1000);
+        }
 
-        // Continuous high-definition heart sticker floating deployment loop
+        setInterval(updateHeartbeat, 1000);
+
         const stickerArray = ['❤️', '💖', '💍', '✨', '🌸', '💝', '🌹', '💕', '🎈'];
         setInterval(() => {
             const stickerElement = document.createElement('div');
             stickerElement.classList.add('ambient-sticker');
-            stickerElement.innerText = stickerArray[Math.floor(Math.random() * stickerArray.length)];
+            stickerElement.textContent = stickerArray[Math.floor(Math.random() * stickerArray.length)];
             stickerElement.style.left = Math.random() * 95 + 'vw';
             stickerElement.style.animationDuration = (Math.random() * 3 + 4) + 's';
             document.body.appendChild(stickerElement);
@@ -305,8 +301,88 @@
         function transitionAppDeck() {
             if (runningState === 1) {
                 runningState = 2;
+                heroAsset.textContent = '💍';
+                deckTitle.innerHTML = 'Will You Marry Me?';
+                deckPrompt.innerHTML = 'Dearest Divya, you make my whole world infinitely brighter and more beautiful just by existing. Dhanraj wants to hold your hand through every sunset, share every smile, and love you unconditionally forever and ever. Will you make me the happiest person in the universe?';
+                valAffection.textContent = 'To Eternity ✨';
+                valHeart.textContent = '145 bpm';
+                yesAction.innerHTML = 'YES! 😍❤️';
+                yesAction.style.transform = 'translateX(-65px)';
+                noAction.classList.remove('hidden');
+                requestAnimationFrame(() => {
+                    const yesRect = yesAction.getBoundingClientRect();
+                    noAction.style.position = 'absolute';
+                    noAction.style.left = `${yesRect.left + yesRect.width + 10}px`;
+                    noAction.style.top = `${yesRect.top}px`;
+                });
+            } else if (runningState === 2) {
+                executeVictoryGrandFinale();
+            }
+        }
 
-                // Max Romance Layman Dialogue Overhaul
-                heroAsset.innerText = "💍";
-                deckTitle.innerHTML = "Will You Marry Me?";
-                deckPrompt.innerHTML = "Dearest Divya, you make my whole world infinitely brighter and more beautiful just by existing. Dhanraj wants to hold your hand through every sunset, share every smile, and love you unconditionally forever and ever. Will you make me the happiest person in the universe?";// Shift metrics to pure absolute devotionvalAffection.innerText = "To Eternity ✨";valHeart.innerText = "145 bpm";yesAction.innerHTML = "YES! 😍❤️";// Reposition main confirmation target to assign spacing boundary constraintsyesAction.style.transform = "translateX(-65px)";noAction.classList.remove('hidden');noAction.style.left = (yesAction.offsetLeft + yesAction.offsetWidth + 10) + 'px';noAction.style.top = yesAction.offsetTop + 'px';} else if (runningState === 2) {executeVictoryGrandFinale();}}// Kinetic runway controller for button interception tracking loopsfunction escapeFromTarget(event) {const paddingBoundary = 120;const horizontalLimit = window.innerWidth - paddingBoundary;const verticalLimit = window.innerHeight - paddingBoundary;const escapeCoordinateX = Math.random() * (horizontalLimit - paddingBoundary) + (paddingBoundary / 2);const escapeCoordinateY = Math.random() * (verticalLimit - paddingBoundary) + (paddingBoundary / 2);noAction.style.position = 'fixed';noAction.style.left = escapeCoordinateX + 'px';noAction.style.top = escapeCoordinateY + 'px';}noAction.addEventListener('mouseenter', escapeFromTarget);noAction.addEventListener('mouseover', escapeFromTarget);noAction.addEventListener('touchstart', (e) => {e.preventDefault(); // Complete safety layout wall defending mobile multi-tapsescapeFromTarget();});function executeVictoryGrandFinale() {runningState = 3;noAction.remove();yesAction.classList.add('hidden');heroAsset.innerText = "👩‍❤️‍👨";valHeart.innerText = "Pure Bliss 🥰";valAffection.innerText = "Forever! ♾️";deckTitle.innerHTML = "She Said YES! 💖";deckTitle.classList.add('victory-text');deckPrompt.innerHTML = "Thank you for choosing me, my beautiful Divya!The greatest, most magical love story of our lives begins today.I love you more than all the stars in the sky! 🌟💍";// Premium high-velocity long duration victory confetti stormconst duration = 12 * 1000;const animationEnd = Date.now() + duration;(function frame() {confetti({ particleCount: 4, angle: 55, spread: 70, origin: { x: 0, y: 0.7 } });confetti({ particleCount: 4, angle: 125, spread: 70, origin: { x: 1, y: 0.7 } });if (Date.now() < animationEnd) {requestAnimationFrame(frame);}}());}
+        function escapeFromTarget(event) {
+            event?.preventDefault();
+            const paddingBoundary = 120;
+            const horizontalLimit = window.innerWidth - paddingBoundary;
+            const verticalLimit = window.innerHeight - paddingBoundary;
+            const escapeCoordinateX = Math.random() * Math.max(0, horizontalLimit - paddingBoundary) + (paddingBoundary / 2);
+            const escapeCoordinateY = Math.random() * Math.max(0, verticalLimit - paddingBoundary) + (paddingBoundary / 2);
+            noAction.style.position = 'fixed';
+            noAction.style.left = escapeCoordinateX + 'px';
+            noAction.style.top = escapeCoordinateY + 'px';
+        }
+
+        noAction.addEventListener('mouseenter', escapeFromTarget);
+        noAction.addEventListener('mouseover', escapeFromTarget);
+        noAction.addEventListener('touchstart', (event) => {
+            escapeFromTarget(event);
+        });
+
+        function launchConfetti() {
+            const colors = ['#ff4b2b', '#ff758c', '#ffd700', '#ff69b4', '#ffffff'];
+            for (let i = 0; i < 48; i++) {
+                const piece = document.createElement('div');
+                piece.style.position = 'fixed';
+                piece.style.left = `${Math.random() * 100}%`;
+                piece.style.top = '-10px';
+                piece.style.width = `${6 + Math.random() * 6}px`;
+                piece.style.height = `${14 + Math.random() * 10}px`;
+                piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+                piece.style.borderRadius = '2px';
+                piece.style.pointerEvents = 'none';
+                piece.style.zIndex = '999';
+                piece.style.transform = 'rotate(0deg)';
+                document.body.appendChild(piece);
+
+                const driftX = (Math.random() - 0.5) * 220;
+                const duration = 1800 + Math.random() * 1200;
+                piece.animate([
+                    { transform: 'translate3d(0, 0, 0) rotate(0deg)', opacity: 1 },
+                    { transform: `translate3d(${driftX}px, 110vh, 0) rotate(720deg)`, opacity: 0 }
+                ], {
+                    duration,
+                    easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                    fill: 'forwards'
+                });
+
+                setTimeout(() => piece.remove(), duration + 100);
+            }
+        }
+
+        function executeVictoryGrandFinale() {
+            runningState = 3;
+            noAction.remove();
+            yesAction.classList.add('hidden');
+            heroAsset.textContent = '👩‍❤️‍👨';
+            valHeart.textContent = 'Pure Bliss 🥰';
+            valAffection.textContent = 'Forever! ♾️';
+            deckTitle.innerHTML = 'She Said YES! 💖';
+            deckTitle.classList.add('victory-text');
+            deckPrompt.innerHTML = 'Thank you for choosing me, my beautiful Divya! The greatest, most magical love story of our lives begins today. I love you more than all the stars in the sky! 🌟💍';
+            launchConfetti();
+        }
+
+        yesAction.addEventListener('click', transitionAppDeck);
+    </script>
+</body>
+</html>
